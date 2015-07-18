@@ -1,7 +1,7 @@
 var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
-	var database = [{username : "a", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a", right : "Admin"},{username : "b", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a",right : "Admin"}];
-var privileges = [{username :"a", right : "Admin"},{username: "b", right: "Admin"}];
+	var database = [{username : "a", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a", right : "Admin"},{username : "b", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a",right : "User"}];
+var privileges = [{username :"a", right : "Admin"},{username: "b", right: "User"}];
 //var database =[{username : "a",password :"a"},{username:"b",password :"b"}];
 function enterdata()
 {
@@ -91,17 +91,17 @@ alert("yes");
 if (database[index].right == "Admin")
 {
 	alert("Admin");
-	window.open("pc.html");
+	window.open("pc1.html");
 }
 else if (database[index].right == "User")
 {
 	alert("User");
-	window.open("pc.html");
+	window.open("pc2.html");
 }
 else if (database[index].right == "Volunteer")
 {
 	alert("Volunteer");
-	window.open("pc.html");
+	window.open("pc3.html");
 }
 }
 else
@@ -109,4 +109,42 @@ else
 	alert("Unsuccessful");
 }
 
+}
+function adduser()
+{
+	var name = prompt("Please enter username");
+	if(name!=null)
+		var username = name;
+	var rights = prompt("Please enter privileges");
+	if(rights!=null)
+		var right = rights;
+	privileges.push({username : username, right : right});
+	alert(privileges.length);
+//	alert("hi");
+//	document.getElementById('pop-form').style.display = "block";
+}
+
+function deluser()
+{
+	var name = prompt("Please enter username");
+	if(name!=null)
+		var username = name;
+	var found=false;
+	var index= -1;
+	for(var i =0; i<privileges.length;++i)
+	{
+		if(username == privileges[i].username)
+		{
+			index=i;
+			found = true;
+			//alert(username);
+		}
+	}
+	if(found)
+		privileges.splice(index,1);
+	else
+		alert("No user found");
+	alert(privileges.length);
+//	alert("hi");
+//	document.getElementById('pop-form').style.display = "block";
 }

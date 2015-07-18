@@ -8,6 +8,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/routes.js"></script>
     <script src="assets/js/angular.js"></script>
+    <script src="assets/js/login.js"></script>
   </head>
 
   <style>
@@ -87,18 +88,28 @@
         </div>
       </div>
 
+
+
       <div class="grid-block collapse medium-9 large-9 vertical">
         <div id="header" class="shrink collapse grid-content">
           <ul class="menu-bar primary">
             <li class="hide-for-medium"><a zf-open="sidebar" href="#">Menu</a></li>
-            <div class="align-left grid-content medium-9">
+            <div class="align-left grid-content medium-5">
                  <li><a href="#">Peace Corps Mobile Hub</a></li>
 	   </div>
             <div class="align-right grid-content shrink collapse">
             	<img src="images/woman.png" width="50" height="50">
             </div>
-            <li><a href="#">Log Out</a></li>
+<!--	<li><a href="#">Add User</a></li>-->
+	
+	<button class="button expand" onclick="adduser()">Try it</button>
+
+	<li><a href="#">Delete User</a></li>
+            <li><a href="index.html">Log Out</a></li>
           </ul>
+
+
+
         
           <div class="grid-content medium-9 medium-2">
 	         <section class="block-list">
