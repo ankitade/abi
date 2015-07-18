@@ -1,6 +1,6 @@
 var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
-	var database = [{username : "a", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a", right : "a"},{username : "b", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a",right : "a"}];
+	var database = [{username : "a", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a", right : "Admin"},{username : "b", firstname : "a", lastname : "a", email : "A", country : "r", gender : "f", address : "a", password : "a",right : "Admin"}];
 var privileges = [{username :"a", right : "Admin"},{username: "b", right: "Admin"}];
 //var database =[{username : "a",password :"a"},{username:"b",password :"b"}];
 function enterdata()
@@ -44,7 +44,7 @@ if(valid == true)
 else 
 	alert("wrong privilege chosen");
 
-window.show("../index.html");
+window.open("../index.html");
 
 }
 
@@ -75,20 +75,34 @@ function validate(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 var valid = false;
-
+var index= -1;
 //var unArray = ["Philip", "George", "Sarah", "Michael"];  // as many as you like - no comma after final entry
 //var pwArray = ["Password1", "Patssword2", "Password3", "Password4"];  // the corresponding passwords;
 
 for (var i=0; i <database.length; i++) {
 if ((username == database[i].username) && (password == database[i].password)) {
 valid = true;
+index= i;
 break;
 }
 }
 if (valid==true){
 alert("yes");
-window.open("pc.html");
-
+if (database[index].right == "Admin")
+{
+	alert("Admin");
+	window.open("pc.html");
+}
+else if (database[index].right == "User")
+{
+	alert("User");
+	window.open("pc.html");
+}
+else if (database[index].right == "Volunteer")
+{
+	alert("Volunteer");
+	window.open("pc.html");
+}
 }
 else
 {
