@@ -100,7 +100,7 @@
             <div class="align-right grid-content shrink collapse">
             	<img src="images/woman.png" width="50" height="50">
             </div>
-            <li><a href="index.html">Log Out</a></li>
+            <li><a href="#">Log Out</a></li>
           </ul>
         
           <div class="grid-content medium-9 medium-2">
