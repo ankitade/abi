@@ -45,8 +45,8 @@ function validate(){
 //}
 //}
 
-window.open("/home/ankitade/Downloads/myApp/client/templates/pc.html");
-return false;
+
+
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 var valid = false;
@@ -62,7 +62,7 @@ break;
 }
 if (valid==true){
 alert("yes");
-window.location = "templates/home.html";
+window.open("pc.html");
 }
 else
 {
