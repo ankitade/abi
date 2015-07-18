@@ -87,20 +87,20 @@ break;
 }
 }
 if (valid==true){
-alert("yes");
+//alert("yes");
 if (database[index].right == "Admin")
 {
-	alert("Admin");
+//	alert("Admin");
 	window.open("pc1.html");
 }
 else if (database[index].right == "User")
 {
-	alert("User");
+//	alert("User");
 	window.open("pc2.html");
 }
 else if (database[index].right == "Volunteer")
 {
-	alert("Volunteer");
+//	alert("Volunteer");
 	window.open("pc3.html");
 }
 }
@@ -119,7 +119,7 @@ function adduser()
 	if(rights!=null)
 		var right = rights;
 	privileges.push({username : username, right : right});
-	alert(privileges.length);
+//	alert(privileges.length);
 //	alert("hi");
 //	document.getElementById('pop-form').style.display = "block";
 }
@@ -144,7 +144,7 @@ function deluser()
 		privileges.splice(index,1);
 	else
 		alert("No user found");
-	alert(privileges.length);
+//	alert(privileges.length);
 //	alert("hi");
 //	document.getElementById('pop-form').style.display = "block";
 }

@@ -87,7 +87,7 @@ break;
 }
 }
 if (valid==true){
-alert("yes");
+//alert("yes");
 if (database[index].right == "Admin")
 {
 //	alert("Admin");
